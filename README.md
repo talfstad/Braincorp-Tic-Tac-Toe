@@ -37,8 +37,8 @@ First build the code, and then copy the contents of the build onto an http serve
 
 ## Post Challenge Reflections
 
-linting, react/redux, babel/es6 and webpack, modular css in react components, no es6 functionality! destructuring, rest/spread operator, etc. makes things so much harder.
-one of the reasons UI stuff has advanced so much in the past few years is because of the importance of libraries to support development. Attaching classes to the window object is not ideal. Mutability vs. functional programming. ES6 and lodash have excellent helper methods to to ensure you make all of your code immutable which minimizes debugging. ES6 Object short hand notation. no best practices. destructuring. not putting css into the global namespace and also not putting your classes into the global window object. JSX using references to gain control. Routing is difficult to implement from scratch in a limited time.
+linting, react/redux, babel/es6 and webpack, modular css in react components, no es6 functionality! es6 classes, destructuring, rest/spread operator, etc. makes things so much harder.
+one of the reasons UI stuff has advanced so much in the past few years is because of the importance of libraries to support development. Attaching classes to the window object is not ideal. Mutability vs. functional programming. ES6 and lodash have excellent helper methods to to ensure you make all of your code immutable which minimizes debugging. ES6 Object short hand notation. no best practices. destructuring. not putting css into the global namespace and also not putting your classes into the global window object. JSX using references to gain control. Routing is difficult to implement from scratch in a limited time. not being able to manage immutable state and step through UI. Working with data structures without being able to use the shorthand makes life much harder. Dealing with not knowing if certain features exist in es5 is tough. arrow functions for example work in chrome without any transpiling.
 
 assumptions i made:
 - use minimal tools necessary, minimum libraries. no build/minimization tools.

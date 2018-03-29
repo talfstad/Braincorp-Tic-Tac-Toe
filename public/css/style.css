@@ -80,9 +80,6 @@ body {
 #play-screen .logo {
   float: left;
 }
-#play-screen .logo img {
-  width: 180px;
-}
 #play-screen .game-control-buttons {
   float: right;
 }
