@@ -1,13 +1,32 @@
 // controls which game screen is showing
 const ScreenController = (function() {
     'use strict';
-    
-    StartScreen.addOnClick(function() {
+
+    StartScreen.addOnStartGameClick(function() {
       showPlayScreen();
+    });
+
+    PlayScreen.addShowOptionsClick(function() {
+      showOptionsScreen();
+    });
+
+    OptionsScreen.addOnCloseOptionsClick(function() {
+      showPlayScreen();
+    });
+
+    OptionsScreen.addOnExitGameClick(function() {
+      location.reload();
     });
 
     function _hideAllScreens() {
       StartScreen.hide();
+      PlayScreen.hide();
+      OptionsScreen.hide();
+    }
+
+    function showOptionsScreen() {
+      _hideAllScreens();
+      OptionsScreen.show();
     }
 
   	function showStartScreen() {
@@ -22,6 +41,5 @@ const ScreenController = (function() {
 
     return {
         showStartScreen: showStartScreen,
-        showPlayScreen: showPlayScreen,
     };
 }());

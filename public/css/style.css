@@ -47,6 +47,16 @@ body {
   background: #efefef;
 }
 
+.button.quit-game {
+  float: right;
+  background: #d9534f;
+  color: #fff;
+}
+
+.button.quit-game:hover {
+  background: #b7312d;
+}
+
 .row {
   width: 100%;
   clear: both;
@@ -129,4 +139,29 @@ body {
 }
 .player-turn.x-player-turn {
   float: left;
+}
+.option-item {
+  clear: both;
+}
+
+.options-container {
+  width: 360px;
+}
+
+.option-list,
+.option-title {
+  float: left;
+}
+
+.game-options-list {
+  width: 255px;
+  margin: 30px auto 0;
+}
+
+.option-list {
+  margin: 1em;
+}
+
+.action-buttons {
+  padding-top: 50px;
 }

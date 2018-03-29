@@ -1,11 +1,11 @@
-const StartScreen = (function(window) {
+const StartScreen = (function() {
     'use strict';
 
     const _el = document.getElementById('start-screen');
-    const startButton = _el.getElementsByClassName('button')[0];
+    const _startButton = _el.getElementsByClassName('button')[0];
 
-    function addOnClick(onClick) {
-      startButton.addEventListener('click', onClick);
+    function addOnStartGameClick(onClick) {
+      _startButton.addEventListener('click', onClick);
     }
 
     function show() {
@@ -19,6 +19,6 @@ const StartScreen = (function(window) {
     return {
         show: show,
         hide: hide,
-        addOnClick: addOnClick,
+        addOnStartGameClick: addOnStartGameClick,
     };
-}(window));
+}());
