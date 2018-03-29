@@ -4,13 +4,13 @@
     <link rel="stylesheet" href="./css/style.css"></link>
   </head>
   <body>
-    <div class="game-container">
+    <div>
       <div id="start-screen" class="game-screen hide center">
         <div class="vertical-align">
           <div class="row logo">
             <img src="images/logo.png" alt="tic tac toe logo" />
           </div>
-          <div class="row">
+          <div class="row center">
             <button class="button">
               Play 1v1
             </button>
@@ -18,7 +18,53 @@
         </div>
       </div>
       <div id="play-screen" class="game-screen hide center">
-        Helloo
+        <div class="vertical-align">
+          <div class="row">
+            <div class="game-container">
+              <div class="row">
+                <div class="logo">
+                  <img src="images/logo.png" alt="tic tac toe logo" />
+                </div>
+                <div class="game-control-buttons">
+                  <button type="button" disabled class="button">
+                    Undo Last Move
+                  </button>
+                  <button class="button">||</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="tic-tac-toe-game">
+                  <div class="row row1">
+                    <div class="col col1"></div>
+                    <div class="col col2"></div>
+                    <div class="col col3"></div>
+                  </div>
+                  <div class="row row2">
+                    <div class="col col1"></div>
+                    <div class="col col2"></div>
+                    <div class="col col3"></div>
+                  </div>
+                  <div class="row row3">
+                    <div class="col col1"></div>
+                    <div class="col col2"></div>
+                    <div class="col col3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="player-turns-container">
+                  <div class="player-turn x-player-turn">
+                  </div>
+                  <div class="vs">
+                    <h1>Vs</h1>
+                  </div>
+                  <div class="player-turn o-player-turn">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="options-screen">
 

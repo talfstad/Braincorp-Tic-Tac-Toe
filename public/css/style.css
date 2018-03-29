@@ -5,7 +5,6 @@ body {
 .center {
     margin: auto;
     width: 50%;
-    text-align: center;
 }
 
 .game-screen.hide {
@@ -15,7 +14,7 @@ body {
 .vertical-align {
     margin: 0;
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -37,15 +36,97 @@ body {
     cursor: pointer;
 }
 
-.button:hover {
+.button:hover:enabled {
     background-color: #000;
     color: white;
 }
 
-.row {
-  width: 100%;
+.button:disabled {
+  cursor: default;
+  color: #aaa;
+  background: #efefef;
 }
 
-.logo {
+.row {
+  width: 100%;
+  clear: both;
+}
+
+.game-container {
+  width: 600px;
+  height: 800px;
+}
+
+/* Start Screen */
+#start-screen .logo {
   margin-bottom: 25px;
+}
+
+#start-screen .center {
+  text-align: center;
+}
+
+/* Play Screen */
+#play-screen .logo {
+  float: left;
+}
+#play-screen .logo img {
+  width: 180px;
+}
+#play-screen .game-control-buttons {
+  float: right;
+}
+
+.tic-tac-toe-game {
+  width: 394px;
+  padding-top: 50px;
+  margin: 0px auto 0;
+}
+
+.tic-tac-toe-game .col {
+  width: 130px;
+  height: 130px;
+}
+
+.tic-tac-toe-game .col {
+  float: left;
+}
+
+.tic-tac-toe-game .row1 .col1,
+.tic-tac-toe-game .row1 .col2,
+.tic-tac-toe-game .row1 .col3,
+.tic-tac-toe-game .row2 .col1,
+.tic-tac-toe-game .row2 .col2,
+.tic-tac-toe-game .row2 .col3 {
+  border-bottom: 2px solid #000;
+}
+
+.tic-tac-toe-game .col1 {
+  border-right: 2px solid #000;
+}
+
+.tic-tac-toe-game .col3 {
+  border-left: 2px solid #000;
+}
+
+.player-turns-container {
+  padding-top: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.player-turn {
+  float: left;
+  width: 33%;
+  height: 150px;
+  background: #fff;
+  border: 2px solid #000;
+}
+.player-turns-container .vs {
+  float: left;
+  width: 32%;
+  text-align: center;
+}
+.player-turn.x-player-turn {
+  float: left;
 }
