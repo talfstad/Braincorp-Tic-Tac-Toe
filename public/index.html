@@ -2,17 +2,23 @@
 <html>
   <head>
     <link rel="stylesheet" href="./css/style.css"></link>
-    <script src="./src/app.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="game-container">
-      <div id="start-screen" class="center">
+      <div id="start-screen" class="game-screen hide center">
         <div class="vertical-align">
-          <img src="images/logo.png" alt="tic tac toe logo" />
+          <div class="row logo">
+            <img src="images/logo.png" alt="tic tac toe logo" />
+          </div>
+          <div class="row">
+            <button class="button">
+              Play 1v1
+            </button>
+          </div>
         </div>
       </div>
-      <div id="play-screen">
-
+      <div id="play-screen" class="game-screen hide center">
+        Helloo
       </div>
       <div id="options-screen">
 
@@ -21,5 +27,12 @@
 
       </div>
     </div>
+    <script src="./src/screens/start.js" type="text/javascript"></script>
+    <script src="./src/screens/play.js" type="text/javascript"></script>
+    <script src="./src/screens/controller.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      // Game start!
+      ScreenController.showStartScreen();
+    </script>
   </body>
 </html>
