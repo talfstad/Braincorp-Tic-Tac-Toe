@@ -1,0 +1,32 @@
+{
+  "name": "braincorp-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Frontenddevlandia's 2021 Tic Tac Toe World Championship qualification application",
+  "main": "index.html",
+  "scripts": {
+    "dev": "nodemon --watch public ./server",
+    "build": "node ./scripts/build.js",
+    "deploy": "node ./scripts/deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talfstad/Braincorp-Tic-Tac-Toe.git"
+  },
+  "author": "Trevor Alfstad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talfstad/Braincorp-Tic-Tac-Toe/issues"
+  },
+  "homepage": "https://github.com/talfstad/Braincorp-Tic-Tac-Toe#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.216.1",
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
+    "mocha": "^5.0.5",
+    "nodemon": "^1.17.2",
+    "npmlog": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "rsync": "^0.6.1",
+    "s3": "^4.4.0"
+  }
+}

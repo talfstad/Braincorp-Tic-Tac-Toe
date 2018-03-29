@@ -1,0 +1,30 @@
+body {
+  /* background: #f1f9ff; */
+  background: linear-gradient(90deg, rgba(240,250,255,1) 0%, rgba(245,245,245,1) 35%, rgba(236,252,255,1) 100%);
+
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.vertical-align {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
