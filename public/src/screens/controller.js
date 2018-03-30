@@ -18,7 +18,11 @@ const ScreenController = (function() {
       location.reload();
     });
 
-    EndScreen.addOnPlayAgainClick(() => {
+    CatsGameScreen.addOnMainMenuClick(() => {
+      location.reload();
+    });
+
+    EndScreen.addOnMainMenuClick(() => {
       location.reload();
     });
 
@@ -27,6 +31,7 @@ const ScreenController = (function() {
       PlayScreen.hide();
       OptionsScreen.hide();
       EndScreen.hide();
+      CatsGameScreen.hide();
     }
 
     function showOptionsScreen() {
@@ -44,13 +49,19 @@ const ScreenController = (function() {
     	StartScreen.show();
   	}
 
+    function showCatsGameScreen() {
+      _hideAllScreens();
+    	CatsGameScreen.show();
+  	}
+
     function showPlayScreen() {
       _hideAllScreens();
       PlayScreen.show();
     }
 
     return {
-        showStartScreen: showStartScreen,
-        showEndScreen: showEndScreen,
+        showStartScreen,
+        showEndScreen,
+        showCatsGameScreen,
     };
 }());

@@ -4,7 +4,7 @@ const PlayScreen = (function() {
     const _el = document.getElementById('play-screen');
     const _gameTiles = _el.getElementsByClassName('game-tile')
     const _optionsButton = _el.getElementsByClassName('button')[1];
-    const _undoLastMoveButton = _el.getElementsByClassName('button')[0];
+    const [_undoLastMoveButton] = _el.getElementsByClassName('button');
 
     let _gameIsInitialized = false;
 
@@ -99,6 +99,8 @@ const PlayScreen = (function() {
 
             if (GameState.currentPlayerIsInWinState()) {
               ScreenController.showEndScreen();
+            } else if (GameState.getIsCatsGame()) {
+              ScreenController.showCatsGameScreen();
             } else {
               GameState.switchTurns();
             }

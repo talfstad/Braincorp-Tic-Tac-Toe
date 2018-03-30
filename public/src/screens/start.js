@@ -2,7 +2,7 @@ const StartScreen = (function() {
     'use strict';
 
     const _el = document.getElementById('start-screen');
-    const _startButton = _el.getElementsByClassName('button')[0];
+    const [_startButton] = _el.getElementsByClassName('button');
 
     function addOnStartGameClick(onClick) {
       _startButton.addEventListener('click', onClick);

@@ -164,6 +164,12 @@ const GameState = (function() {
       return true;
     }
 
+    function getIsCatsGame() {
+      // If gamestate length is 9 and we haven'temp
+      // triggered a win state then it's a cat's game!
+      return _gameState.length === 9;
+    }
+
     function getCurrentPlayerTurn() {
       return _currentPlayer;
     }
@@ -172,6 +178,7 @@ const GameState = (function() {
       getCurrentPlayerTurn,
       switchTurns,
       undoLastMove,
+      getIsCatsGame,
       currentPlayerIsInWinState,
       moveIsNotInGameState,
       pushNewMoveToGameState,
