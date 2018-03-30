@@ -47,9 +47,12 @@ First build the code, and then copy the contents of the build onto an http serve
 
 This challenge made me very much appreciate the modularity of using the latest front end technologies and tools as well as the movie Zardoz (haha).
 
-I believe this challenge code would be much more production ready and maintainable if it used React, Babel (ES6), Eslint (airbnb's config), modular CSS (to avoid global namespace and dead code), and many other tools which abstract some of the more tedious parts of development and make things clearer to read and better organized.
+I believe this challenge code would be much more production ready and maintainable if it used React, Babel, Eslint, modular CSS (or Sass), and many other tools which abstract some of the more tedious parts of development and make things clearer to read and better organized.
 
 No build tools or transpiling were used in order to make it truly pure vanillaJS/HTML/CSS. The only exception was for development tools to leverage express for a generic web server.
+
+**Design limitations:**
+This project puts code in the global namespace. Doing this is generally a very bad idea and hurts readability and maintainability. If this project were to use the latest tools it would have been possible to avoid the global namespace completely.
 
 ## Authors
 
