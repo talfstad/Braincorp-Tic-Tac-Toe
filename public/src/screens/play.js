@@ -4,6 +4,8 @@ const PlayScreen = (function() {
     const _el = document.getElementById('play-screen');
     const _gameTiles = _el.getElementsByClassName('game-tile')
     const _optionsButton = _el.getElementsByClassName('button')[1];
+    const _undoLastMoveButton = _el.getElementsByClassName('button')[0];
+
     let _gameIsInitialized = false;
 
     function _getPlayerResourceDomElementForGameMode(player) {
@@ -107,6 +109,12 @@ const PlayScreen = (function() {
         // Initialize click listener for all game tiles
         Array.prototype.forEach.call(_gameTiles, function(tile) {
           tile.addEventListener('click', tileClickedCallback);
+        });
+
+        // Initialize click listener for undoLastMove
+        _undoLastMoveButton.addEventListener('click', () => {
+          GameState.undoLastMove();
+          _drawGameState();
         });
         _gameIsInitialized = true;
       }

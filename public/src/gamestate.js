@@ -107,6 +107,7 @@ const GameState = (function() {
 
     function undoLastMove() {
       _gameState.pop();
+      switchTurns();
     }
 
     function pushNewMoveToGameState(move) {
