@@ -146,11 +146,12 @@ const GameState = (function() {
       // move is valid if there is no row/col currently
       // in the gamestate (aka: if move hasn't been played yet we're good!)
       if (_gameState.length > 0) {
-        Array.prototype.forEach.call(_gameState, function(playedMove) {
-           if (move.row === playedMove.row && move.col === playedMove.col) {
-             return false;
-           }
-        });
+        for (let i=0 ; i<_gameState.length ; i++) {
+          const playedMove = _gameState[i];
+          if (move.row === playedMove.row && move.col === playedMove.col) {
+            return false;
+          }
+        }
       }
       return true;
     }
