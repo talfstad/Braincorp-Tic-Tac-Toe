@@ -56,6 +56,10 @@ No build tools or transpiling were used in order to make it truly pure vanillaJS
 **Design limitations:**
 This project puts code in the global namespace. Doing this is generally a very bad idea and hurts readability and maintainability. To amend this limitation it is suggested that this code is rewritten using the react/redux design patterns.
 
+## Browser Compatibility
+
+This app is currently only tested in Google Chrome 64.0.3282.186
+
 ## Authors
 
 * **Trevor Alfstad**
