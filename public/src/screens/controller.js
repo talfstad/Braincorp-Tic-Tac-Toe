@@ -18,15 +18,25 @@ const ScreenController = (function() {
       location.reload();
     });
 
+    EndScreen.addOnPlayAgainClick(() => {
+      location.reload();
+    });
+
     function _hideAllScreens() {
       StartScreen.hide();
       PlayScreen.hide();
       OptionsScreen.hide();
+      EndScreen.hide();
     }
 
     function showOptionsScreen() {
       _hideAllScreens();
       OptionsScreen.show();
+    }
+
+    function showEndScreen() {
+      _hideAllScreens();
+      EndScreen.show();
     }
 
   	function showStartScreen() {
@@ -41,5 +51,6 @@ const ScreenController = (function() {
 
     return {
         showStartScreen: showStartScreen,
+        showEndScreen: showEndScreen,
     };
 }());

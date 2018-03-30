@@ -34,8 +34,7 @@ const PlayScreen = (function() {
             GameState.pushNewMoveToGameState(move);
 
             if (GameState.currentPlayerIsInWinState()) {
-              // go to end game menu!
-              console.log('in win state');
+              ScreenController.showEndScreen();
             } else {
               GameState.switchTurns();
             }
