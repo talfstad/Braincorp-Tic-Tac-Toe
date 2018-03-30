@@ -99,7 +99,7 @@ const GameState = (function() {
 
     function switchTurns() {
       if (_currentPlayer === 'x') {
-        _currentPlayer = 'y';
+        _currentPlayer = 'o';
       } else {
         _currentPlayer = 'x'
       }
@@ -142,7 +142,14 @@ const GameState = (function() {
       return false;
     }
 
-    function validateMove(move) {
+    function getMoveFromGameState({ row, col }) {
+      const [move] = _gameState.filter((move) => {
+        return move.row === row && move.col === col;
+      });
+      return move;
+    }
+
+    function moveIsNotInGameState(move) {
       // move is valid if there is no row/col currently
       // in the gamestate (aka: if move hasn't been played yet we're good!)
       if (_gameState.length > 0) {
@@ -161,11 +168,12 @@ const GameState = (function() {
     }
 
     return {
-      getCurrentPlayerTurn: getCurrentPlayerTurn,
-      switchTurns: switchTurns,
-      undoLastMove: undoLastMove,
-      currentPlayerIsInWinState: currentPlayerIsInWinState,
-      validateMove: validateMove,
-      pushNewMoveToGameState: pushNewMoveToGameState,
+      getCurrentPlayerTurn,
+      switchTurns,
+      undoLastMove,
+      currentPlayerIsInWinState,
+      moveIsNotInGameState,
+      pushNewMoveToGameState,
+      getMoveFromGameState,
     };
 }());
