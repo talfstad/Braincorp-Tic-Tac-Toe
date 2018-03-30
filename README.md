@@ -2,6 +2,10 @@
 
 This is an implementation of Brain corp's Tic Tac Toe coding challenge based on my interpretation of the goals of the project. My motivation for this project is to demonstrate my general technical abilities with the intention of working together with Brain corp in the future.
 
+### Demo
+
+There is a demo of this code running via AWS S3 and Route53 at my personal site: [here](http://tictactoe.trevoralfstad.com)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -31,10 +35,6 @@ npm run build
 
 The result is a build located under the `dist` directory which is subsequently ready for deployment to an HTTP server of your choosing.
 
-### Demo
-
-There is a demo of this code running via AWS S3 and Route53 at my personal site: [here](http://tictactoe.trevoralfstad.com)
-
 ## Deployment
 
 First build the code, and then copy the contents of the build onto an http server of your choosing. This project does not currently include an automated deploy.
@@ -51,10 +51,10 @@ This challenge made me very much appreciate the modularity of using the latest f
 
 I believe this challenge code would be much more production ready and maintainable if it used React, Babel, Eslint, modular CSS (or Sass), and many other tools which abstract some of the more tedious parts of development and make things clearer to read and better organized.
 
-No build tools or transpiling were used in order to make it truly pure vanillaJS/HTML/CSS. The only exception was for development tools to leverage express for a generic web server.
+No build tools or transpiling were used in order to make it truly pure vanillaJS/HTML/CSS. The only exception was for development tools to leverage express for a generic web server and qunit for some testing.
 
 **Design limitations:**
-This project puts code in the global namespace. Doing this is generally a very bad idea and hurts readability and maintainability. If this project were to use the latest tools it would have been possible to avoid the global namespace completely.
+This project puts code in the global namespace. Doing this is generally a very bad idea and hurts readability and maintainability. To amend this limitation it is suggested that this code is rewritten using the react/redux design patterns.
 
 ## Authors
 
