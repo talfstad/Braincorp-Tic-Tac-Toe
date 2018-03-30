@@ -41,7 +41,9 @@ First build the code, and then copy the contents of the build onto an http serve
 
 ## Testing
 
-
+To run the tests from the browser:
+1. Start the dev server `npm run dev`
+2. Open Chrome and go to the [test page](http://localhost:3000/tests)
 
 ## Post Challenge Reflections
 

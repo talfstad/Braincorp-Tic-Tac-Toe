@@ -4,7 +4,7 @@ const GameState = (function() {
     let _currentPlayer = 'x';
 
     // Tracks gamestate
-    const _gameState = [];
+    let _gameState = [];
 
     const _winStates = [
       // Diagnal left to right
@@ -114,6 +114,10 @@ const GameState = (function() {
       _gameState.push(move);
     }
 
+    function setGameState(gameState) {
+      _gameState = gameState;
+    }
+
     function currentPlayerIsInWinState() {
       // Check to see if any win states are part of the game state for the current player
       for (let i=0 ; i<_winStates.length ; i++) {
@@ -178,6 +182,7 @@ const GameState = (function() {
       getCurrentPlayerTurn,
       switchTurns,
       undoLastMove,
+      setGameState,
       getIsCatsGame,
       currentPlayerIsInWinState,
       moveIsNotInGameState,
