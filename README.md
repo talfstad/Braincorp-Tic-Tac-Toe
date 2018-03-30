@@ -31,17 +31,25 @@ npm run build
 
 The result is a build located under the `dist` directory which is subsequently ready for deployment to an HTTP server of your choosing.
 
+### Demo
+
+There is a demo of this code running via AWS S3 and Route53 at my personal site: [here](http://tictactoe.trevoralfstad.com)
+
 ## Deployment
 
-First build the code, and then copy the contents of the build onto an http server of your choosing.
+First build the code, and then copy the contents of the build onto an http server of your choosing. This project does not currently include an automated deploy.
+
+## Testing
+
+
 
 ## Post Challenge Reflections
 
-linting, react/redux, babel/es6 and webpack, modular css in react components, no es6 functionality! es6 classes, destructuring, rest/spread operator, etc. makes things so much harder.
-one of the reasons UI stuff has advanced so much in the past few years is because of the importance of libraries to support development. Attaching classes to the window object is not ideal. Mutability vs. functional programming. ES6 and lodash have excellent helper methods to to ensure you make all of your code immutable which minimizes debugging. ES6 Object short hand notation. no best practices. destructuring. not putting css into the global namespace and also not putting your classes into the global window object. JSX using references to gain control. Routing is difficult to implement from scratch in a limited time. not being able to manage immutable state and step through UI. Working with data structures without being able to use the shorthand makes life much harder. Dealing with not knowing if certain features exist in es5 is tough. arrow functions for example work in chrome without any transpiling.
+This challenge made me very much appreciate the modularity of using the latest front end technologies and tools as well as the movie Zardoz (haha).
 
-assumptions i made:
-- use minimal tools necessary, minimum libraries. no build/minimization tools.
+I believe this challenge code would be much more production ready and maintainable if it used React, Babel (ES6), Eslint (airbnb's config), modular CSS (to avoid global namespace and dead code), and many other tools which abstract some of the more tedious parts of development and make things clearer to read and better organized.
+
+No build tools or transpiling were used in order to make it truly pure vanillaJS/HTML/CSS. The only exception was for development tools to leverage express for a generic web server.
 
 ## Authors
 
