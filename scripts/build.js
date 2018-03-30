@@ -19,7 +19,7 @@ const copyNewBuildToDist = () =>
   new Promise((resolve, reject) => {
     new Rsync()
     .source('./public/*')
-    .exclude('test')
+    .exclude('tests')
     .destination('./dist')
     .flags('a') // archive mode
     .execute((executeError) => {
