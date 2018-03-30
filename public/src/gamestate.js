@@ -9,91 +9,91 @@ const GameState = (function() {
     const _winStates = [
       // Diagnal left to right
       [{
-        row: 1,
-        col: 1,
+        row: '1',
+        col: '1',
       }, {
-        row: 2,
-        col: 2,
+        row: '2',
+        col: '2',
       }, {
-        row: 3,
-        col: 3,
+        row: '3',
+        col: '3',
       }],
       // Diagnal right to left
       [{
-        row: 1,
-        col: 3,
+        row: '1',
+        col: '3',
       }, {
-        row: 2,
-        col: 2,
+        row: '2',
+        col: '2',
       }, {
-        row: 3,
-        col: 1,
+        row: '3',
+        col: '1',
       }],
       // Horizontal row 1
       [{
-        row: 1,
-        col: 1,
+        row: '1',
+        col: '1',
       }, {
-        row: 1,
-        col: 2,
+        row: '1',
+        col: '2',
       }, {
-        row: 1,
-        col: 3,
+        row: '1',
+        col: '3',
       }],
       // Horizontal row 2
       [{
-        row: 2,
-        col: 1,
+        row: '2',
+        col: '1',
       }, {
-        row: 2,
-        col: 2,
+        row: '2',
+        col: '2',
       }, {
-        row: 2,
-        col: 3,
+        row: '2',
+        col: '3',
       }],
       // Horizontal row 3
       [{
-        row: 3,
-        col: 1,
+        row: '3',
+        col: '1',
       }, {
-        row: 3,
-        col: 2,
+        row: '3',
+        col: '2',
       }, {
-        row: 3,
-        col: 3,
+        row: '3',
+        col: '3',
       }],
       // Vertical col 1
       [{
-        row: 1,
-        col: 1,
+        row: '1',
+        col: '1',
       }, {
-        row: 2,
-        col: 1,
+        row: '2',
+        col: '1',
       }, {
-        row: 3,
-        col: 1,
+        row: '3',
+        col: '1',
       }],
       // Vertical col 2
       [{
-        row: 1,
-        col: 2,
+        row: '1',
+        col: '2',
       }, {
-        row: 2,
-        col: 2,
+        row: '2',
+        col: '2',
       }, {
-        row: 3,
-        col: 2,
+        row: '3',
+        col: '2',
       }],
       // Vertical col 3
       [{
-        row: 1,
-        col: 3,
+        row: '1',
+        col: '3',
       }, {
-        row: 2,
-        col: 3,
+        row: '2',
+        col: '3',
       }, {
-        row: 3,
-        col: 3,
+        row: '3',
+        col: '3',
       }],
     ];
 
@@ -114,33 +114,32 @@ const GameState = (function() {
     }
 
     function currentPlayerIsInWinState() {
-      // let isInWinState = false;
-      // if (_gameState.length > 0) {
-      //   for (var i=0 ; i<_winStates.length ; i++) {
-      //     const winState = _winStates[i];
-      //
-      //     const filteredGameStateKeepingWinStateMoves = _gameState.filter((gameStateMove) => {
-      //       // is this game state move in the win state array ?
-      //       const filteredWinStateRemovedIfInGameState = winState.filter((winStateMove) => {
-      //         // is gameStateMove in winState ?
-      //         const moveWithPlayer = {
-      //           ...winStateMove,
-      //           player: _currentPlayer,
-      //         };
-      //         console.log(moveWithPlayer);
-      //       });
-      //       return filteredWinStateRemovedIfInGameState.length > 1;
-      //     });
-      //
-      //     // Detect a win state
-      //     if (filteredGameStateKeepingWinStateMoves === 3) {
-      //       isInWinState = true;
-      //       break;
-      //     }
-      //   }
-      // }
-      // return isInWinState;
-      return true;
+      // Check to see if any win states are part of the game state for the current player
+      for (let i=0 ; i<_winStates.length ; i++) {
+        const winStateToTest = _winStates[i];
+        const filteredWinState = winStateToTest.filter((winMove) => {
+          const winMoveToTest = {
+            ...winMove,
+            player: _currentPlayer,
+          };
+
+          const filteredGamestate = _gameState.filter((gameMove) => {
+            const movesAreEqual = (move1, move2) => {
+              return move1.row === move2.row && move1.col === move2.col && move1.player === move2.player;
+            };
+            return movesAreEqual(gameMove, winMoveToTest);
+          });
+
+          return filteredGamestate.length === 1;
+        });
+        // If the gamestate does not include a win state move it
+        // is filtered out above, so if we have a filteredWinState
+        // that is still length 3 after we test it it is a win state
+        if (filteredWinState.length === 3) {
+          return true;
+        }
+      }
+      return false;
     }
 
     function validateMove(move) {
