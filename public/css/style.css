@@ -162,3 +162,8 @@ body {
 .action-buttons {
   padding-top: 50px;
 }
+
+.row-winner {
+  text-align: center;
+  margin-bottom: 20px;
+}

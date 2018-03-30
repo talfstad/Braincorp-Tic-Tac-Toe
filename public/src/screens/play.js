@@ -8,7 +8,7 @@ const PlayScreen = (function() {
 
     let _gameIsInitialized = false;
 
-    function _getPlayerResourceDomElementForGameMode(player) {
+    function getPlayerResourceDomElementForGameMode(player) {
       const { gameMode } = OptionsScreen.getGameOptions();
 
       const createImageElForPlayer = (resource) => {
@@ -50,7 +50,7 @@ const PlayScreen = (function() {
 
         const drawMoveGameTile = (gameTileEl, player) => {
           // get resource to draw based on options
-          const resourceEl = _getPlayerResourceDomElementForGameMode(player);
+          const resourceEl = getPlayerResourceDomElementForGameMode(player);
           gameTileEl.appendChild(resourceEl);
         };
 
@@ -134,6 +134,7 @@ const PlayScreen = (function() {
     return {
         show: show,
         hide: hide,
-        addShowOptionsClick: addShowOptionsClick,
+        addShowOptionsClick,
+        getPlayerResourceDomElementForGameMode,
     };
 }());

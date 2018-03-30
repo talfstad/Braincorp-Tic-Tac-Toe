@@ -8,8 +8,15 @@ const EndScreen = (function() {
       _playAgainButton.addEventListener('click', onClick);
     }
 
+    function _drawWinner() {
+        const [playerDivEl] = _el.getElementsByClassName('player-image');
+        const currentPlayerTurn = GameState.getCurrentPlayerTurn();
+        playerDivEl.appendChild(PlayScreen.getPlayerResourceDomElementForGameMode(currentPlayerTurn));
+    }
+
     function show() {
       _el.classList.remove('hide');
+      _drawWinner();
   	}
 
     function hide() {
