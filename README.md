@@ -33,7 +33,7 @@ In lieu of using nodeJS to run a development server, or to create a build for de
 npm run build
 ```
 
-The result is a build located under the `dist` directory which is subsequently ready for deployment to an HTTP server of your choosing.
+The result is a build located under the `dist` directory which is subsequently ready for deployment to a HTTP server of your choosing.
 
 ## Deployment
 
@@ -49,12 +49,24 @@ To run the tests from the browser:
 
 This challenge made me very much appreciate the modularity of using the latest front end technologies and tools as well as the movie Zardoz (haha).
 
-I believe this challenge code would be much more production ready and maintainable if it used React, Babel, Eslint, modular CSS (or Sass), and many other tools which abstract some of the more tedious parts of development and make things clearer to read and better organized.
+I believe this challenge code would be much more production ready and maintainable if it used React, Babel, Webpack, Eslint, modular CSS (or Sass), and many other tools which abstract some of the more tedious parts of development and make things clearer to read and better organized.
 
 No build tools or transpiling were used in order to make it truly pure vanillaJS/HTML/CSS. The only exception was for development tools to leverage express for a generic web server and qunit for some testing.
 
 **Design limitations:**
 This project puts code in the global namespace. Doing this is generally a very bad idea and hurts readability and maintainability. To amend this limitation it is suggested that this code is rewritten using the react/redux design patterns.
+
+
+**Technical limitations:**
+This project works in limited browsers due to the use of some ES6 syntax which is currently not widely supported. Normally this would be transpiled into valid ES5 (and work across all major browsers). My intent with choosing this path was to demonstrate my knowledge of ES6 without using a build tool as much as possible at the unfortunate expense of browser compatibility.
+
+**Design improvements:**
+There should be a turn indicator on the PlayScreen to show who's turn it currently is. This originally was designed in to the game, but shelved due to time restrictions and can be planned for the next iteration/sprint if this project is continued.
+
+**Technical improvements:**
+This game should use a non static class for gameState which can be instantiated at the beginning of a game. This would then allow a way to restart the game without reloading the page to get a new gameState, or having a very specific resetGamestate function (which would not be ideal since there are any number of properties of the gameState that need to be reset).
+
+This technology stack should be re-examined on a whole with the team to decide if it's truly the best fit moving forward and a code review should be held to gain a deeper understanding technically as well as to create a shared set of team development habits.
 
 ## Browser Compatibility
 
