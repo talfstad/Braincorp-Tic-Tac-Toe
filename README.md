@@ -64,7 +64,7 @@ This project works in limited browsers due to the use of some ES6 syntax which i
 There should be a turn indicator on the PlayScreen to show who's turn it currently is. This originally was designed in to the game, but shelved due to time restrictions and can be planned for the next iteration/sprint if this project is continued.
 
 **Technical improvements:**
-This game should use a non static class for gameState which can be instantiated at the beginning of a game. This would then allow a way to restart the game without reloading the page to get a new gameState, or having a very specific resetGamestate function (which would not be ideal since there are any number of properties of the gameState that need to be reset).
+This game should use a non static class for gameState which can be instantiated at the beginning of a game. This would then allow a way to restart the game without reloading the page to get a new gameState, or having a very specific resetGamestate function (which would not be ideal since there are any number of properties of the gameState that need to be reset as the game grows).
 
 This technology stack should be re-examined on a whole with the team to decide if it's truly the best fit moving forward and a code review should be held to gain a deeper understanding technically as well as to create a shared set of team development habits.
 
