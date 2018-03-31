@@ -2,6 +2,10 @@
 
 This is an implementation of Brain corp's Tic Tac Toe coding challenge based on my interpretation of the goals of the project. My motivation for this project is to demonstrate my general technical abilities with the intention of working together with Brain corp in the future.
 
+## Browser Compatibility
+
+This app is currently only tested in Google Chrome 64.0.3282.186
+
 ### Demo
 
 There is a demo of this code running via AWS S3 and Route53 at my personal site: [here](http://tictactoe.trevoralfstad.com)
@@ -67,10 +71,6 @@ There should be a turn indicator on the PlayScreen to show who's turn it current
 This game should use a non static class for gameState which can be instantiated at the beginning of a game. This would then allow a way to restart the game without reloading the page to get a new gameState, or having a very specific resetGamestate function (which would not be ideal since there are any number of properties of the gameState that need to be reset as the game grows).
 
 This technology stack should be re-examined on a whole with the team to decide if it's truly the best fit moving forward and a code review should be held to gain a deeper understanding technically as well as to create a shared set of team development habits.
-
-## Browser Compatibility
-
-This app is currently only tested in Google Chrome 64.0.3282.186
 
 ## Authors
 
