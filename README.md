@@ -2,6 +2,17 @@
 
 This is an implementation of Brain corp's Tic Tac Toe coding challenge based on my interpretation of the goals of the project. My motivation for this project is to demonstrate my general technical abilities with the intention of working together with Brain corp in the future.
 
+Original Prompt:
+Create a Tic Tac Toe game, using Front End technologies. This game should feature:
+
+User vs. User functionality
+An undo button that removes the last move.
+Use as much vanilla JS as possible, production level code.
+A Responsive Layout
+When complete, please create a public git repo with a readme on how to run the app.
+Bonus: 
+In the fictional country of ‘Frontenddevlandia’, Tic-tac-toe enthusiasts do not use X’s and O’s for this sport, X’s in their culture are actually Vector-based Squares and O’s are known to be any variant of Sean Connery’s face from Zardoz. It’s a weird culture, but we must adapt! This is a must if we want to be included in the Tic Tac Toe World Championships of 2021. We need the ability to hot swap these pieces at any given time throughout the game. Please create the UI and functionality for this.
+
 ## Browser Compatibility
 
 This app is currently only tested in Google Chrome 64.0.3282.186
