@@ -2,7 +2,7 @@
 
 This is an implementation of Brain corp's Tic Tac Toe coding challenge based on my interpretation of the goals of the project. My motivation for this project is to demonstrate my general technical abilities with the intention of working together with Brain corp in the future.
 
-#Original Prompt:
+# Original Prompt:
 Create a Tic Tac Toe game, using Front End technologies. This game should feature:
 
 User vs. User functionality
